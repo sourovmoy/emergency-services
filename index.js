@@ -1,3 +1,5 @@
+const storage = [];
+let love = 0;
 /*
  * Shared function start
  */
@@ -23,7 +25,30 @@ function coinsCheck() {
     const presentCoins = coins - cutCoin;
     document.getElementById("coins").innerText = presentCoins;
   } else {
-    return alert("❌Insufficient Coins");
+    alert("❌Insufficient Coins");
+  }
+  return;
+}
+
+//call history
+function callHistory(history) {
+  storage.push(history);
+  const callHistory = document.getElementById("call-history");
+  callHistory.innerText = "";
+  for (const data of storage) {
+    const div = document.createElement("div");
+    div.innerHTML = `
+     <div
+            class="flex justify-between items-center rounded-md bg-[#fafafa] mx-4 p-4"
+          >
+            <div>
+              <h4 class="font-semibold">${data.name}</h4>
+              <p class="text-[#5c5c5c]">${data.number}</p>
+            </div>
+            <div>${data.date}</div>
+          </div>
+    `;
+    callHistory.appendChild(div);
   }
 }
 /*
@@ -32,7 +57,6 @@ function coinsCheck() {
 
 // for love button
 
-let love = 0;
 function loveCount() {
   love++;
   document.getElementById("love-count").innerText = love;
@@ -82,6 +106,12 @@ document
   .addEventListener("click", function () {
     alert("📞Calling National Emergency Service 999....");
     coinsCheck();
+    const history = {
+      name: "National Emergency Number",
+      number: "999",
+      date: new Date().toLocaleTimeString(),
+    };
+    callHistory(history);
   });
 
 // call function for Police Helpline
@@ -90,11 +120,23 @@ document
   .addEventListener("click", function () {
     alert("📞Calling Police Helpline Service 999....");
     coinsCheck();
+    const history = {
+      name: "Police Helpline Number",
+      number: "999",
+      date: new Date().toLocaleTimeString(),
+    };
+    callHistory(history);
   });
 // call function for Fire Service
 document.getElementById("fire-call-btn").addEventListener("click", function () {
   alert("📞Calling Fire Helpline Service 999....");
   coinsCheck();
+  const history = {
+    name: "Fire Service Number",
+    number: "999",
+    date: new Date().toLocaleTimeString(),
+  };
+  callHistory(history);
 });
 // call function for Ambulance Service
 document
@@ -102,6 +144,12 @@ document
   .addEventListener("click", function () {
     alert("📞Calling Ambulance Helpline Service 1994-999999....");
     coinsCheck();
+    const history = {
+      name: "Ambulance Service Number",
+      number: "1994-999999",
+      date: new Date().toLocaleTimeString(),
+    };
+    callHistory(history);
   });
 // call function for Women & Child
 document
@@ -109,6 +157,12 @@ document
   .addEventListener("click", function () {
     alert("📞Calling Women & Child Helpline Service 109....");
     coinsCheck();
+    const history = {
+      name: "Women & Child Helpline Number",
+      number: "109",
+      date: new Date().toLocaleTimeString(),
+    };
+    callHistory(history);
   });
 // call function for Anti-Corruption
 document
@@ -116,6 +170,12 @@ document
   .addEventListener("click", function () {
     alert("📞Calling Anti-Corruption Helpline Service 106....");
     coinsCheck();
+    const history = {
+      name: "Anti-Corruption Helpline Number",
+      number: "106",
+      date: new Date().toLocaleTimeString(),
+    };
+    callHistory(history);
   });
 // call function for electricity
 document
@@ -123,11 +183,23 @@ document
   .addEventListener("click", function () {
     alert("📞Calling Electricity Helpline Service 16216....");
     coinsCheck();
+    const history = {
+      name: "Electricity Helpline Number",
+      number: "16216",
+      date: new Date().toLocaleTimeString(),
+    };
+    callHistory(history);
   });
 // call function for brac
 document.getElementById("brac-call-btn").addEventListener("click", function () {
   alert("📞Calling Brac Helpline Service 16445....");
   coinsCheck();
+  const history = {
+    name: "Brac Helpline Number",
+    number: "16445",
+    date: new Date().toLocaleTimeString(),
+  };
+  callHistory(history);
 });
 // call function for emergency
 document
@@ -135,4 +207,10 @@ document
   .addEventListener("click", function () {
     alert("📞Calling Bangladesh Railway Helpline Service 163....");
     coinsCheck();
+    const history = {
+      name: "Bangladesh Railway Helpline Number",
+      number: "163",
+      date: new Date().toLocaleTimeString(),
+    };
+    callHistory(history);
   });
