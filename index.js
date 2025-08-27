@@ -1,18 +1,34 @@
 /*
- * Shared function
+ * Shared function start
  */
 // string to number
 function strToNUm(id) {
-  const love = parseInt(document.getElementById(id).innerText);
+  const number = parseInt(document.getElementById(id).innerText);
 
-  return love;
+  return number;
 }
 
+// love button click function
 function loveClickBtn(id) {
   document.getElementById(id).addEventListener("click", function () {
     loveCount();
   });
 }
+
+// coins checker
+function coinsCheck() {
+  const cutCoin = 20;
+  const coins = strToNUm("coins");
+  if (coins >= 20) {
+    const presentCoins = coins - cutCoin;
+    document.getElementById("coins").innerText = presentCoins;
+  } else {
+    return alert("❌Insufficient Coins");
+  }
+}
+/*
+ * Shared function end
+ */
 
 // for love button
 
@@ -56,3 +72,11 @@ loveClickBtn("brac-love-btn");
 //    love count for railway
 
 loveClickBtn("railway-love-btn");
+
+// call useing coins
+document
+  .getElementById("ambulance-call-btn")
+  .addEventListener("click", function () {
+    alert("📞Calling National Emergency Service 999....");
+    coinsCheck();
+  });
