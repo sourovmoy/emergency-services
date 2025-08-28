@@ -219,3 +219,17 @@ document.getElementById("clear-btn").addEventListener("click", function () {
   storage.length = 0;
   document.getElementById("call-history").innerHTML = "";
 });
+
+// ### try some shortcut###
+// copy btn function by loop through
+let copy = 0;
+const btns = document.getElementsByClassName("copy-btn");
+for (const btn of btns) {
+  btn.addEventListener("click", function () {
+    console.log(btn);
+
+    copy++;
+    console.log(copy);
+    document.getElementById("copy-count").innerText = copy;
+  });
+}
