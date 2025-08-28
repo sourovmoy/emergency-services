@@ -214,3 +214,8 @@ document
     };
     callHistory(history);
   });
+// clear btn function
+document.getElementById("clear-btn").addEventListener("click", function () {
+  storage.length = 0;
+  document.getElementById("call-history").innerHTML = "";
+});
