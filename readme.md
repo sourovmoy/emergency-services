@@ -12,9 +12,9 @@
 
 2. How do you **create and insert a new element into the DOM**?
  Ans:
-  1. cons variable = document.creatElement("")
-  2. variable.innerHtml``
-  3. parent.appendChild(variable)
+  (1) cons variable = document.creatElement("")
+  (2) variable.innerHtml``
+  (3) parent.appendChild(variable)
 3. What is **Event Bubbling** and how does it work?
  Ans: when you fire an event in any element it start at the target element and go back to its parent ,then grand parents as bubbling in water.
       
@@ -25,6 +25,7 @@
  Ans:
    preventDefault(): stop automatic reload from the form tag.
    stopPropagation(): stop events from bullbling.
+   
 
 
 
