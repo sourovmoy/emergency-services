@@ -116,6 +116,7 @@ document
   });
 
 // call function for Police Helpline
+
 document
   .getElementById("police-call-btn")
   .addEventListener("click", function () {
@@ -128,7 +129,9 @@ document
     };
     callHistory(history);
   });
+
 // call function for Fire Service
+
 document.getElementById("fire-call-btn").addEventListener("click", function () {
   alert("📞Calling Fire Helpline Service 999....");
   coinsCheck();
@@ -139,7 +142,9 @@ document.getElementById("fire-call-btn").addEventListener("click", function () {
   };
   callHistory(history);
 });
+
 // call function for Ambulance Service
+
 document
   .getElementById("ambulance-call-btn")
   .addEventListener("click", function () {
@@ -152,7 +157,9 @@ document
     };
     callHistory(history);
   });
+
 // call function for Women & Child
+
 document
   .getElementById("Women-call-btn")
   .addEventListener("click", function () {
@@ -165,7 +172,9 @@ document
     };
     callHistory(history);
   });
+
 // call function for Anti-Corruption
+
 document
   .getElementById("Anti-Corruption-call-btn")
   .addEventListener("click", function () {
@@ -178,7 +187,9 @@ document
     };
     callHistory(history);
   });
+
 // call function for electricity
+
 document
   .getElementById("electricity-call-btn")
   .addEventListener("click", function () {
@@ -191,7 +202,9 @@ document
     };
     callHistory(history);
   });
+
 // call function for brac
+
 document.getElementById("brac-call-btn").addEventListener("click", function () {
   alert("📞Calling Brac Helpline Service 16445....");
   coinsCheck();
@@ -202,7 +215,9 @@ document.getElementById("brac-call-btn").addEventListener("click", function () {
   };
   callHistory(history);
 });
+
 // call function for emergency
+
 document
   .getElementById("railway-call-btn")
   .addEventListener("click", function () {
@@ -215,7 +230,9 @@ document
     };
     callHistory(history);
   });
+
 // clear btn function
+
 document.getElementById("clear-btn").addEventListener("click", function () {
   storage.length = 0;
   document.getElementById("call-history").innerHTML = "";
@@ -223,6 +240,7 @@ document.getElementById("clear-btn").addEventListener("click", function () {
 
 // ## # try some shortcut###
 // copy btn function by loop through
+
 let copy = 0;
 const btns = document.getElementsByClassName("copy-btn");
 for (const btn of btns) {
