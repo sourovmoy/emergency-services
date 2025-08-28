@@ -41,7 +41,7 @@ function callHistory(history) {
     const div = document.createElement("div");
     div.innerHTML = `
      <div
-            class="flex justify-between items-center rounded-md bg-[#fafafa] mx-4 p-4"
+            class="flex justify-between items-center rounded-md bg-[#fafafa] mx-4 my-5 p-4"
           >
             <div>
               <h4 class="font-semibold">${data.name}</h4>
