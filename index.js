@@ -26,8 +26,9 @@ function coinsCheck() {
     document.getElementById("coins").innerText = presentCoins;
   } else {
     alert("❌Insufficient Coins");
+
+    return;
   }
-  return;
 }
 
 //call history
@@ -220,16 +221,18 @@ document.getElementById("clear-btn").addEventListener("click", function () {
   document.getElementById("call-history").innerHTML = "";
 });
 
-// ### try some shortcut###
+// ## # try some shortcut###
 // copy btn function by loop through
 let copy = 0;
 const btns = document.getElementsByClassName("copy-btn");
 for (const btn of btns) {
   btn.addEventListener("click", function () {
-    console.log(btn);
-
+    alert("Do you want to copy the number?©️");
+    const copyNum = document.getElementsByClassName("copy-num")[0].innerText;
+    navigator.clipboard.writeText(copyNum);
+    alert("Number Copied😊");
     copy++;
-    console.log(copy);
+
     document.getElementById("copy-count").innerText = copy;
   });
 }
