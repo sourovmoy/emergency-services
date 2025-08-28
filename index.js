@@ -24,10 +24,11 @@ function coinsCheck() {
   if (coins >= 20) {
     const presentCoins = coins - cutCoin;
     document.getElementById("coins").innerText = presentCoins;
+    return true;
   } else {
     alert("❌Insufficient Coins");
 
-    return;
+    return false;
   }
 }
 
@@ -106,12 +107,16 @@ document
   .getElementById("emergency-call-btn")
   .addEventListener("click", function () {
     alert("📞Calling National Emergency Service 999....");
-    coinsCheck();
     const history = {
       name: "National Emergency Number",
       number: "999",
       date: new Date().toLocaleTimeString(),
     };
+
+    const check = coinsCheck();
+    if (check === false) {
+      return;
+    }
     callHistory(history);
   });
 
@@ -121,12 +126,16 @@ document
   .getElementById("police-call-btn")
   .addEventListener("click", function () {
     alert("📞Calling Police Helpline Service 999....");
-    coinsCheck();
+
     const history = {
       name: "Police Helpline Number",
       number: "999",
       date: new Date().toLocaleTimeString(),
     };
+    const check = coinsCheck();
+    if (check === false) {
+      return;
+    }
     callHistory(history);
   });
 
@@ -134,12 +143,16 @@ document
 
 document.getElementById("fire-call-btn").addEventListener("click", function () {
   alert("📞Calling Fire Helpline Service 999....");
-  coinsCheck();
+
   const history = {
     name: "Fire Service Number",
     number: "999",
     date: new Date().toLocaleTimeString(),
   };
+  const check = coinsCheck();
+  if (check === false) {
+    return;
+  }
   callHistory(history);
 });
 
@@ -149,12 +162,16 @@ document
   .getElementById("ambulance-call-btn")
   .addEventListener("click", function () {
     alert("📞Calling Ambulance Helpline Service 1994-999999....");
-    coinsCheck();
+
     const history = {
       name: "Ambulance Service Number",
       number: "1994-999999",
       date: new Date().toLocaleTimeString(),
     };
+    const check = coinsCheck();
+    if (check === false) {
+      return;
+    }
     callHistory(history);
   });
 
@@ -164,12 +181,16 @@ document
   .getElementById("Women-call-btn")
   .addEventListener("click", function () {
     alert("📞Calling Women & Child Helpline Service 109....");
-    coinsCheck();
+
     const history = {
       name: "Women & Child Helpline Number",
       number: "109",
       date: new Date().toLocaleTimeString(),
     };
+    const check = coinsCheck();
+    if (check === false) {
+      return;
+    }
     callHistory(history);
   });
 
@@ -179,12 +200,16 @@ document
   .getElementById("Anti-Corruption-call-btn")
   .addEventListener("click", function () {
     alert("📞Calling Anti-Corruption Helpline Service 106....");
-    coinsCheck();
+
     const history = {
       name: "Anti-Corruption Helpline Number",
       number: "106",
       date: new Date().toLocaleTimeString(),
     };
+    const check = coinsCheck();
+    if (check === false) {
+      return;
+    }
     callHistory(history);
   });
 
@@ -194,12 +219,16 @@ document
   .getElementById("electricity-call-btn")
   .addEventListener("click", function () {
     alert("📞Calling Electricity Helpline Service 16216....");
-    coinsCheck();
+
     const history = {
       name: "Electricity Helpline Number",
       number: "16216",
       date: new Date().toLocaleTimeString(),
     };
+    const check = coinsCheck();
+    if (check === false) {
+      return;
+    }
     callHistory(history);
   });
 
@@ -207,12 +236,16 @@ document
 
 document.getElementById("brac-call-btn").addEventListener("click", function () {
   alert("📞Calling Brac Helpline Service 16445....");
-  coinsCheck();
+
   const history = {
     name: "Brac Helpline Number",
     number: "16445",
     date: new Date().toLocaleTimeString(),
   };
+  const check = coinsCheck();
+  if (check === false) {
+    return;
+  }
   callHistory(history);
 });
 
@@ -222,12 +255,16 @@ document
   .getElementById("railway-call-btn")
   .addEventListener("click", function () {
     alert("📞Calling Bangladesh Railway Helpline Service 163....");
-    coinsCheck();
+
     const history = {
       name: "Bangladesh Railway Helpline Number",
       number: "163",
       date: new Date().toLocaleTimeString(),
     };
+    const check = coinsCheck();
+    if (check === false) {
+      return;
+    }
     callHistory(history);
   });
 
