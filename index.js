@@ -13,6 +13,8 @@ function strToNUm(id) {
 // love button click function
 function loveClickBtn(id) {
   document.getElementById(id).addEventListener("click", function () {
+    const loveBtn = document.getElementById(id);
+    // loveBtn.classList.add("hover:scale-[1.25]");
     loveCount();
   });
 }
